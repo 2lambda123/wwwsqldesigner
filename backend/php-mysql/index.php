@@ -1,10 +1,10 @@
 <?php
 	set_time_limit(0);
 	function setup_saveloadlist() {
-		define("SERVER","localhost");
-		define("USER","");
-		define("PASSWORD","");
-		define("DB","home");
+		define("SERVER", getenv("MYSQL_HOST"));
+		define("USER", getenv("MYSQL_USER"));
+		define("PASSWORD", getenv("MYSQL_PASS"));
+		define("DB", getenv("MYSQL_DB"));
 		define("TABLE","wwwsqldesigner");
 	}
 	function setup_import() {
